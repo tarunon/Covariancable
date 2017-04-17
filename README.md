@@ -26,7 +26,7 @@ protocol MyCustomProtocol: Covariancable {
 }
 
 extension MyCustomProtocol where PropertiesType == Properties<(myParameter: MyGenericsType, foo: Int, bar: String)> {
-  var properties: PropertiesType = PropertiesType {
+  var properties: PropertiesType {
     return Properties((myParameter: myParameter, foo: foo, bar: bar))
   }
 }
